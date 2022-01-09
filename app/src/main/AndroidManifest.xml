@@ -10,6 +10,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppPotager">
         <activity
+            android:name=".Calendar"
+            android:exported="false" />
+        <activity
+            android:name=".Garden"
+            android:exported="false" />
+        <activity
+            android:name=".Favorite"
+            android:exported="false" />
+        <activity
+            android:name=".Glossary"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

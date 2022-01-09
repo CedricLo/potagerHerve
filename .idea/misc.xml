@@ -4,6 +4,11 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Universite/Annee4/PROMOB/PotagerHerve/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Users/Cedric/Documents/GitHub/potagerHerve/app/src/main/res/layout/activity_calendar.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Cedric/Documents/GitHub/potagerHerve/app/src/main/res/layout/activity_favorite.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Cedric/Documents/GitHub/potagerHerve/app/src/main/res/layout/activity_garden.xml" value="0.24010416666666667" />
+        <entry key="..\:/Users/Cedric/Documents/GitHub/potagerHerve/app/src/main/res/layout/activity_glossary.xml" value="0.264" />
+        <entry key="..\:/Users/Cedric/Documents/GitHub/potagerHerve/app/src/main/res/layout/activity_main.xml" value="0.264" />
       </map>
     </option>
   </component>
