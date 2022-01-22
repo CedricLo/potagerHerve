@@ -4,7 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MotionEvent;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.ImageButton;
 
 public class MainActivity extends AppCompatActivity {
@@ -19,11 +22,11 @@ public class MainActivity extends AppCompatActivity {
     private ImageButton garden;
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
 
         navView = (View) findViewById(R.id.navView);
         navButton = (ImageButton) findViewById(R.id.navButton);
@@ -48,26 +51,26 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void goToGlossary(View view){
-        System.out.println("GLOSSARY");
         Intent intent = new Intent(MainActivity.this,Glossary.class);
         startActivity(intent);
+        overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
     }
 
     public void goToFavorite(View view){
-        System.out.println("FAVORITE");
         Intent intent = new Intent(MainActivity.this,Favorite.class);
         startActivity(intent);
+        overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
     }
 
     public void goToGarden(View view){
-        System.out.println("GARDEN");
         startActivity(new Intent(MainActivity.this,Garden.class));
+        overridePendingTransition(R.anim.slide_in_left,R.anim.slide_out_right);
     }
 
     public void goToCalendar(View view){
-        System.out.println("CALENDAR");
         Intent intent = new Intent(MainActivity.this,Calendar.class);
         startActivity(intent);
+        overridePendingTransition(R.anim.slide_in_left,R.anim.slide_out_right);
     }
 
 }
