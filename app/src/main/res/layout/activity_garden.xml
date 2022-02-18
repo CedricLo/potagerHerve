@@ -135,12 +135,14 @@
                 tools:ignore="SpeakableTextPresentCheck" />
 
             <ImageView
-                android:id="@+id/imageView2"
+                android:id="@+id/imageView5"
                 android:layout_width="80dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:paddingTop="@dimen/cardview_default_radius"
                 android:scaleType="fitCenter"
-                app:srcCompat="@drawable/crops" />
+                android:scrollY="6dp"
+                app:srcCompat="@drawable/logo" />
 
             <ImageButton
                 android:id="@+id/searchButton"
@@ -153,6 +155,27 @@
                 tools:ignore="SpeakableTextPresentCheck" />
 
         </LinearLayout>
+
+        <HorizontalScrollView
+            android:id="@+id/scrollBarTable"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="16dp"
+            android:padding="10px">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10px"
+                tools:ignore="SpeakableTextPresentCheck">
+
+                <TableLayout
+                    android:id="@+id/gardenGrid"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </ScrollView>
+        </HorizontalScrollView>
+
     </LinearLayout>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
