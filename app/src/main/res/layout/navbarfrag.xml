@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:backgroundTint="@color/darkGreen"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/calendar_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/darkGreen"
+                android:contentDescription="calendar_icon"
+                android:onClick="goToCalendar"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/calendar" />
+
+            <ImageButton
+                android:id="@+id/grid_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/midGreen"
+                android:contentDescription="grid_icon"
+                android:onClick="goToGarden"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/crops" />
+
+            <ImageButton
+                android:id="@+id/home_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/lightGreen"
+                android:contentDescription="home_icon"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/home" />
+
+            <ImageButton
+                android:id="@+id/glossary_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:contentDescription="glossary_icon"
+                android:onClick="goToGlossary"
+                android:scaleType="fitCenter"
+                android:scaleX="1.1"
+                app:srcCompat="@drawable/book" />
+
+            <ImageButton
+                android:id="@+id/favorite_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:contentDescription="favorite_icon"
+                android:onClick="goToFavorite"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/star" />
+        </LinearLayout>
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+</LinearLayout>

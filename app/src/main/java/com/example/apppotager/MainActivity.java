@@ -1,13 +1,14 @@
 package com.example.apppotager;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
-import android.view.MotionEvent;
 import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
 import android.widget.ImageButton;
 
 public class MainActivity extends AppCompatActivity {
@@ -27,23 +28,35 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
         navView = (View) findViewById(R.id.navView);
         navButton = (ImageButton) findViewById(R.id.navButton);
         navButton2 = (ImageButton) findViewById(R.id.navButton2);
-        glossary = (ImageButton) findViewById(R.id.glossary_icon);
-        garden = (ImageButton) findViewById(R.id.grid_icon);
-        calendar = (ImageButton) findViewById(R.id.calendar_icon);
-        favorite = (ImageButton) findViewById(R.id.favorite_icon);
-        home = (ImageButton) findViewById(R.id.home_icon);
-        glossary.setBackgroundColor(getResources().getColor(R.color.darkGreen));
-        garden.setBackgroundColor(getResources().getColor(R.color.darkGreen));
-        calendar.setBackgroundColor(getResources().getColor(R.color.darkGreen));
-        favorite.setBackgroundColor(getResources().getColor(R.color.darkGreen));
-        home.setBackgroundColor(getResources().getColor(R.color.lightGreen));
+//        glossary = (ImageButton) findViewById(R.id.glossary_icon);
+//        garden = (ImageButton) findViewById(R.id.grid_icon);
+//        calendar = (ImageButton) findViewById(R.id.calendar_icon);
+//        favorite = (ImageButton) findViewById(R.id.favorite_icon);
+//        home = (ImageButton) findViewById(R.id.home_icon);
+//        glossary.setBackgroundColor(getResources().getColor(R.color.darkGreen));
+//        garden.setBackgroundColor(getResources().getColor(R.color.darkGreen));
+//        calendar.setBackgroundColor(getResources().getColor(R.color.darkGreen));
+//        favorite.setBackgroundColor(getResources().getColor(R.color.darkGreen));
+//        home.setBackgroundColor(getResources().getColor(R.color.lightGreen));
+
+/*
+        FragmentManager fragmentManager = getFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            fragmentTransaction.setReorderingAllowed(true);
+        }
+
+        Fragment frag = new NavBarFrag();
+        fragmentTransaction.add(R.id.navFrag,frag).commit();
+
+        fragmentTransaction.commit();*/
 
         navView.setVisibility(View.GONE);
     }
+
 
     public void setVisibility(View view){
         if(navView.isShown()) navView.setVisibility(View.GONE);
